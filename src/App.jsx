@@ -5,6 +5,7 @@ import { ContextProvider } from './context/Context';
 import Cart from './pages/Cart';
 import Detail from './pages/Detail';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/pizza/:id' element={<Detail/>}/>
             <Route path='/carrito' element={<Cart />} />
+            <Route path='*' element={<NotFound/>} />
           </Routes>
           <Footer />
         </ContextProvider>
