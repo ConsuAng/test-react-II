@@ -12,11 +12,11 @@ export default function Cart() {
       {cart.length > 0 ?
         <div className="bg-gray-100 py-8">
           <h1 className="text-lg ml-3">Detalles del pedido:</h1>
-          <div className="bg-white m-3">
+          <div className="bg-white m-3 rounded">
             {
               cart?.map((pizza, i) => (
                 <div key={i} className='flex  items-center p-3 justify-between'>
-                  <div className="flex items-center pr-2">
+                  <div className="flex items-center pr-2 w-full">
                     <img src={pizza.img} className='w-1/4' />
                     <p className="pl-2 capitalize">{pizza.name}</p>
                   </div>
