@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { ContextProvider } from './context/Context';
 import Cart from './pages/Cart';
@@ -16,6 +17,7 @@ function App() {
             <Route path='/pizza/:id' element={<Detail/>}/>
             <Route path='/carrito' element={<Cart />} />
           </Routes>
+          <Footer />
         </ContextProvider>
       </BrowserRouter>
     </div>
