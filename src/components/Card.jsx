@@ -9,9 +9,6 @@ export default function Card({ pizza }) {
   const navigate = useNavigate();
   const { addCart } = useContext(Context);
 
-
-
-
   return (
     <div>
       <div className="bg-cover bg-center w-56 h-[150px]" style={{ backgroundImage: `url(${pizza.img})` }}></div>
