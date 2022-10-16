@@ -8,12 +8,12 @@ export default function Home() {
 
   return (
     <>
-    <Banner />
+      <Banner />
       <div className="flex flex-wrap gap-5 justify-center pt-5">
         {pizzas.map((pizza, i) => (
           <Card key={i} pizza={pizza} />
         ))}
       </div>
-    </>
+    </> 
   )
 }
