@@ -4,6 +4,7 @@ import eyes from '../assets/eyes-24px.png';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from "react";
 import Context from "../context/Context";
+import { formatPrice } from '../utils/format-price';
 
 export default function Card({ pizza }) {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function Card({ pizza }) {
         ))}
       </div>
       <div className='flex items-center flex-col border-x-slate-200 border border-t-transparent rounded-b bg-white'>
-        <div className='text-2xl py-5'>$ {pizza.price}</div>
+        <div className='text-2xl py-5'>$ {formatPrice(pizza.price)}</div>
         <div className='w-full flex justify-around pb-4'>
           <button className='bg-cyan-400 text-white rounded py-2 px-2 flex items-center'
             onClick={()=> navigate(`/pizza/${pizza.id}`)}

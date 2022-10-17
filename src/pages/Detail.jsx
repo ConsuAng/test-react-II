@@ -4,7 +4,7 @@ import Context from "../context/Context";
 import Container from '../layout/Container';
 import slice from '../assets/pizza-slice2-24px.png';
 import shop from '../assets/shopping-cart2-16px.png';
-
+import { formatPrice } from '../utils/format-price';
 
 export default function Detail() {
   const { id } = useParams();
@@ -24,7 +24,7 @@ export default function Detail() {
              <p key={i} className="capitalize flex font-light text-slate-700 py-1 pl-6"><img src={slice} className='pr-2'/> {ingredient}</p>
           ))}
           <div className='flex items-center justify-between py-3'>
-            <p className='text-xl'>Precio: ${pizzas[index]?.price}</p>
+            <p className='text-xl'>Precio: $ {formatPrice(pizzas[index]?.price)}</p>
             <button 
               onClick={()=>addCart(pizzas[index].id)}
               className='bg-red-500 text-white rounded py-2 px-2 flex items-center'>Añadir <img src={shop} className="pl-2"/></button>

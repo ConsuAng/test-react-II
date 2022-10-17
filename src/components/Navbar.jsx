@@ -3,7 +3,7 @@ import shop from '../assets/shopping-cart2-24px.png';
 import { useContext } from "react";
 import Context from "../context/Context";
 import {useNavigate} from 'react-router-dom';
-
+import { formatPrice } from '../utils/format-price';
 
 export default function Navbar() {
   const { total } = useContext(Context);
@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
         <div className='flex justify-center items-center' onClick={() => navigate('/carrito')}>
           <img src={shop} className="pr-2" />
-          <p>$ {total}</p>
+          <p>$ {formatPrice(total)}</p>
         </div>
       </div>
     </div>
