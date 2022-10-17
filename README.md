@@ -6,7 +6,7 @@ The detail page shows the description and ingredients of the selected pizza and 
 
 The shopping cart shows the resume of your order. Here you increment or decrease the number of each pizza.
 
-You can try this project [here!](https://consuang-shoppingcart-test.netlify.app/carrito) ✨
+You can try this project [here!](https://consuang-shoppingcart-test.netlify.app) ✨
 
 
 ## Getting Started with Vite
